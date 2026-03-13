@@ -1,0 +1,8 @@
+{
+  "name": "unit-converter",
+  "version": "0.1.0",
+  "description": "Web-based unit converter (length, weight, volume, area).",
+  "scripts": {
+    "start": "node -e \"require('http').createServer((req, res) => { if (req.url === '/') req.url = '/index.html'; require('fs').createReadStream(__dirname + req.url).pipe(res); }).listen(8080); console.log('Serving on http://localhost:8080');\""
+  }
+}

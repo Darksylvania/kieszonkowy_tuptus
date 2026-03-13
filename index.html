@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kieszonkowy Tuptuś</title>
+  <meta name="theme-color" content="#0b1424">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Kieszonkowy Tuptuś</h1>
+    <p class="subtitle">Kiedy Tuptuś hopsa za daleko, żeby usłyszał</p>
+  </header>
+
+  <main class="app-main" aria-label="Unit converter">
+    <section class="panel">
+      <div class="collapsible collapsed">
+        <button class="collapsible__header" type="button" data-toggle-target="converterSection">
+          <span>Kalkulator jednostek</span>
+          <span class="chevron">▾</span>
+        </button>
+
+        <div id="converterSection" class="collapsible__content">
+          <label class="field">
+            <span>Kategoria</span>
+            <select id="category" aria-label="Wybierz kategorię jednostek"></select>
+          </label>
+
+          <div class="row">
+            <label class="field">
+              <span>Z</span>
+              <select id="unitFrom" aria-label="Wybierz jednostkę źródłową"></select>
+            </label>
+
+            <label class="field">
+              <span>Na</span>
+              <select id="unitTo" aria-label="Wybierz jednostkę docelową"></select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Wartość</span>
+            <input id="inputValue" type="number" step="any" placeholder="Wpisz liczbę" aria-label="Wartość do przeliczenia" />
+          </label>
+
+          <div class="result" aria-live="polite">
+            <div class="result-label">Wynik</div>
+            <div id="outputValue" class="result-value">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible collapsed">
+        <button class="collapsible__header" type="button" data-toggle-target="areaSection">
+          <span>Kalkulator powierzchni</span>
+          <span class="chevron">▾</span>
+        </button>
+
+        <div id="areaSection" class="collapsible__content">
+          <div class="row">
+            <label class="field">
+              <span>Szerokość</span>
+              <input id="widthValue" type="number" step="any" placeholder="Szerokość" aria-label="Wartość szerokości" />
+            </label>
+
+            <label class="field">
+              <span>Wysokość</span>
+              <input id="heightValue" type="number" step="any" placeholder="Wysokość" aria-label="Wartość wysokości" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Jednostka długości</span>
+            <select id="lengthUnit" aria-label="Jednostka długości dla kalkulacji powierzchni"></select>
+          </label>
+
+          <div class="row">
+            <label class="field">
+              <span>Jednostka powierzchni</span>
+              <select id="areaUnit" aria-label="Jednostka powierzchni dla wyniku"></select>
+            </label>
+
+            <button id="calcArea" class="primary">Oblicz</button>
+          </div>
+
+          <div class="result" aria-live="polite">
+            <div class="result-label">Powierzchnia</div>
+            <div id="areaOutput" class="result-value">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible collapsed">
+        <button class="collapsible__header" type="button" data-toggle-target="proportionSection">
+          <span>Kalkulator proporcji</span>
+          <span class="chevron">▾</span>
+        </button>
+
+        <div id="proportionSection" class="collapsible__content">
+          <p class="muted">Oblicz brakującą wartość w proporcji: A : B = C : D</p>
+
+          <div class="row">
+            <label class="field">
+              <span>A</span>
+              <input id="propA" type="number" step="any" placeholder="A" aria-label="Wartość proporcji A" />
+            </label>
+
+            <label class="field">
+              <span>B</span>
+              <input id="propB" type="number" step="any" placeholder="B" aria-label="Wartość proporcji B" />
+            </label>
+          </div>
+
+          <div class="row">
+            <label class="field">
+              <span>C</span>
+              <input id="propC" type="number" step="any" placeholder="C" aria-label="Wartość proporcji C" />
+            </label>
+
+            <button id="calcProportion" class="primary">Oblicz D</button>
+          </div>
+
+          <div class="result" aria-live="polite">
+            <div class="result-label">D</div>
+            <div id="propOutput" class="result-value">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <span>Built with web tech (PWA-ready)</span>
+  </footer>
+
+  <script src="renderer.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').catch(() => {
+        // Service worker registration failed (likely offline or unsupported)
+      });
+    }
+  </script>
+</body>
+</html>

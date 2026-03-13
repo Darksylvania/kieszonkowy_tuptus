@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ce1e6"/>
+      <stop offset="100%" stop-color="#9b6bfe"/>
+    </linearGradient>
+    <filter id="f" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" in="blur" result="shadow"/>
+      <feOffset dx="0" dy="12" in="shadow" result="off"/>
+      <feBlend in="SourceGraphic" in2="off" mode="normal"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#g)" filter="url(#f)" />
+  <text x="50%" y="55%" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="220" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">UC</text>
+</svg>
