@@ -29,7 +29,7 @@
             <select id="category" aria-label="Wybierz kategorię jednostek"></select>
           </label>
 
-          <div class="row">
+          <div class="row row-inline">
             <label class="field">
               <span>Z</span>
               <select id="unitFrom" aria-label="Wybierz jednostkę źródłową"></select>
@@ -39,12 +39,17 @@
               <span>Na</span>
               <select id="unitTo" aria-label="Wybierz jednostkę docelową"></select>
             </label>
-          </div>
 
-          <label class="field">
-            <span>Wartość</span>
-            <input id="inputValue" type="number" step="any" placeholder="Wpisz liczbę" aria-label="Wartość do przeliczenia" />
-          </label>
+            <div class="field swap-block">
+              <span>Zamień jednostki</span>
+              <button id="swapUnits" class="swap-button" type="button" title="Zamień jednostki">⇅</button>
+            </div>
+
+            <label class="field field-with-space">
+              <span>Wartość</span>
+              <input id="inputValue" type="number" step="any" placeholder="Wpisz liczbę" aria-label="Wartość do przeliczenia" />
+            </label>
+          </div>
 
           <div class="result" aria-live="polite">
             <div class="result-label">Wynik</div>
@@ -83,10 +88,13 @@
               <select id="areaUnit" aria-label="Jednostka powierzchni dla wyniku"></select>
             </label>
 
-            <button id="calcArea" class="primary">Oblicz</button>
+            <button id="calcArea" class="primary">
+              <span>Oblicz</span>
+              <img class="button-graphic" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHF4cXl0Zzh0cW01OGw4anUycGVpdXVhZXl0MnFxaGd6cmViaDUyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sU511xfb7ORqw/giphy.gif" alt="Vincent Vega" />
+            </button>
           </div>
 
-          <div class="result" aria-live="polite">
+          <div class="result result-spaced" aria-live="polite">
             <div class="result-label">Powierzchnia</div>
             <div id="areaOutput" class="result-value">—</div>
           </div>
@@ -120,10 +128,13 @@
               <input id="propC" type="number" step="any" placeholder="C" aria-label="Wartość proporcji C" />
             </label>
 
-            <button id="calcProportion" class="primary">Oblicz D</button>
+            <button id="calcProportion" class="primary">
+            <span>Oblicz D</span>
+            <img class="button-graphic" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHF4cXl0Zzh0cW01OGw4anUycGVpdXVhZXl0MnFxaGd6cmViaDUyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sU511xfb7ORqw/giphy.gif" alt="Vincent Vega" />
+          </button>
           </div>
 
-          <div class="result" aria-live="polite">
+          <div class="result result-spaced" aria-live="polite">
             <div class="result-label">D</div>
             <div id="propOutput" class="result-value">—</div>
           </div>

@@ -127,7 +127,7 @@ function convert() {
   window.clearTimeout(outputValue._resetTimer);
   outputValue._resetTimer = window.setTimeout(() => {
     outputValue.classList.remove('updated');
-  }, 250);
+  }, 600);
 }
 
 function calculateArea() {
@@ -156,7 +156,7 @@ function calculateArea() {
   window.clearTimeout(areaOutput._resetTimer);
   areaOutput._resetTimer = window.setTimeout(() => {
     areaOutput.classList.remove('updated');
-  }, 250);
+  }, 600);
 }
 
 function calculateProportion() {
@@ -178,7 +178,7 @@ function calculateProportion() {
   window.clearTimeout(propOutput._resetTimer);
   propOutput._resetTimer = window.setTimeout(() => {
     propOutput.classList.remove('updated');
-  }, 250);
+  }, 600);
 }
 
 function setupCollapsibles() {
@@ -211,6 +211,13 @@ function init() {
   unitFromSelect.addEventListener('change', convert);
   unitToSelect.addEventListener('change', convert);
   inputValue.addEventListener('input', convert);
+
+  document.getElementById('swapUnits').addEventListener('click', () => {
+    const temp = unitFromSelect.value;
+    unitFromSelect.value = unitToSelect.value;
+    unitToSelect.value = temp;
+    convert();
+  });
 
   calcAreaButton.addEventListener('click', calculateArea);
   widthValue.addEventListener('input', calculateArea);
