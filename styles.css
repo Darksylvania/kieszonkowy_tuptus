@@ -293,54 +293,58 @@ input:focus {
 
 @media (max-width: 600px) {
   .app-header {
-    padding: 16px 16px 10px;
+    padding: 10px 12px 6px;
   }
 
   .app-header h1 {
-    font-size: clamp(20px, 5vw, 28px);
+    font-size: clamp(18px, 5vw, 24px);
   }
 
   .subtitle {
-    font-size: 0.85rem;
-    margin: 8px auto 0;
+    font-size: 0.75rem;
+    margin: 4px auto 0;
   }
 
   .app-main {
-    padding: 12px 14px 16px;
-    gap: 12px;
+    padding: 8px 10px 12px;
+    gap: 8px;
+  }
+
+  .panel {
+    padding: 0;
   }
 
   .collapsible__header {
-    padding: 12px 14px;
-    font-size: 0.95rem;
+    padding: 10px 12px;
+    font-size: 0.9rem;
   }
 
   .collapsible__content {
-    padding: 12px 10px 12px;
+    padding: 10px 8px 10px;
   }
 
   .field {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .field span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .row {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 4px;
   }
 
   .row-inline {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 4px;
   }
 
   .swap-button {
-    width: 32px;
-    height: 32px;
-    font-size: 0.95rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
     padding: 0;
   }
 
@@ -349,42 +353,42 @@ input:focus {
   }
 
   .swap-block span {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     display: none;
   }
 
   select,
   input {
-    padding: 6px 8px;
-    font-size: 0.85rem;
-    border-radius: 10px;
+    padding: 5px 6px;
+    font-size: 0.8rem;
+    border-radius: 8px;
   }
 
   .primary {
-    min-height: 40px;
-    padding: 0 8px;
-    font-size: 0.75rem;
-  }
-
-  .button-graphic {
-    width: 40px;
-    height: 40px;
-  }
-
-  .result {
-    padding: 8px;
-  }
-
-  .result-value {
-    font-size: 1.4rem;
-  }
-
-  .result-label {
+    min-height: 36px;
+    padding: 0 6px;
     font-size: 0.7rem;
   }
 
+  .button-graphic {
+    width: 36px;
+    height: 36px;
+  }
+
+  .result {
+    padding: 6px;
+  }
+
+  .result-value {
+    font-size: 1.3rem;
+  }
+
+  .result-label {
+    font-size: 0.65rem;
+  }
+
   .app-footer {
-    padding: 10px 14px;
-    font-size: 0.8rem;
+    padding: 6px 10px;
+    font-size: 0.75rem;
   }
 }
