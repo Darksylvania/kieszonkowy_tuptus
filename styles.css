@@ -29,7 +29,7 @@ body {
 
 .app-header {
   padding: 24px 28px 14px;
-  text-align: center;
+  text-align: left;
   backdrop-filter: blur(18px);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.1));
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -41,8 +41,7 @@ body {
 }
 
 .subtitle {
-  margin: 10px auto 0;
-  max-width: 520px;
+  margin: 10px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -302,7 +301,7 @@ input:focus {
 
   .subtitle {
     font-size: 0.75rem;
-    margin: 4px auto 0;
+    margin: 4px 0 0;
   }
 
   .app-main {
